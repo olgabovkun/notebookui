@@ -1,0 +1,20 @@
+.navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: 0.1m;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.btn-sign-in {
+    background-color: #8c00ff;
+    color: #f2f2f2;
+    border-radius: 1.3em;
+}
+
+.btn-sign-in:active {
+    border: 1px solid #8c00ff !important;
+    background-color: white !important;
+}
+.btn-sign-in:hover {
+    background-color: #a332ff;
+}

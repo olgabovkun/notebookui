@@ -1,0 +1,21 @@
+/* .dots {
+    float: right;
+    display: none;
+    width: 10%;
+} */
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.edit-item {
+    cursor: pointer;
+}
+
+.edit-item:hover {
+    color:blueviolet;
+}
+
+.dropdown-item:active {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,65 @@
+<div class="wrapper h-100 w-100">
+
+    <ng-container *ngIf="showSideBar">
+        <div class="opened-sidebar sidebar pt-2 px-2 d-inline-block" #sidebarIdentifier [style.width.px]="sidebarWidth">
+
+            <div class="header text-center mb-4 d-flex flex-row justify-content-between">
+                <div>Notebooks</div>
+                <div>
+                    <i class="bi bi-text-indent-right" (click)="toggleSideBar()"></i>
+                </div>
+            </div>
+
+            <div class="user mb-3">User Name</div>
+
+            <div class="notebooks py-3">
+                <div class="notebook-item mb-1" *ngFor="let notebook of notebooks">
+                    <div class="d-inline-block notebook-item-title" (click)="toggleNotesList(notebook)">
+                        <span *ngIf="showNotes(notebook)"><i class="bi bi-caret-down"></i></span>
+                        <span *ngIf="!showNotes(notebook)"><i class="bi bi-caret-right"></i></span>
+                        {{ notebook.title }}
+
+                    </div>
+                    <span class="dots px-1">
+                        <app-edit-notebook-dropdown [notebook]="notebook"></app-edit-notebook-dropdown>
+                    </span>
+
+                    <div *ngIf="showNotes(notebook)">
+                        <div class="note-item" *ngFor="let note of notebook.notes">
+                            <a [routerLink]="'/home/note/' + note.id"
+                                (click)="openNote(note, notebook)">{{note.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-notebook my-3 text-muted">
+                <span (click)="openModal()">
+                    <i class="bi bi-plus-lg"></i>
+                    <span class="px-2 add-notebook-text">Add new notebook</span>
+                </span>
+            </div>
+
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="!showSideBar">
+        <div class="h-100 d-inline-block closed-sidebar sidebar pt-2 px-2 me-5">
+            <div class="header text-center mb-4 text-center">
+                <div>
+                    <i class="bi bi-text-indent-left" (click)="toggleSideBar()"></i>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <div class="h-100 divider d-inline-block me-5" *ngIf="showSideBar" (mousedown)="start($event)"></div>
+
+    <ng-container *ngIf="this.noteId">
+        <ng-container *ngIf="(this.notebooks$ | async) as notebooks">
+            <ng-container *ngIf="(this.note$ | async) as note">
+                <app-content [notebooks]="notebooks" [note]="note"></app-content>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div>

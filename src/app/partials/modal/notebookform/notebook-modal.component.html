@@ -1,0 +1,19 @@
+<form (ngSubmit)="save()" novalidate>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="this.createMode">Add new notebook</h4>
+        <h4 class="modal-title" *ngIf="!this.createMode">Edit notebook</h4>
+        <button type="button" class="btn-close" aria-label="Close"
+            (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body mb-3">
+        <label for="title" class="form-label">Title for notebook</label>
+        <input type="text" class="form-control" id="title" name="title" required [(ngModel)]="title">
+    </div>
+    <div class="modal-footer">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-danger" *ngIf="this.createMode">Add</button>
+            <button type="submit" class="btn btn-danger" *ngIf="!this.createMode">Edit</button>
+            <button type="button" class="btn btn-outline-dark" (click)="cancel()">Close</button>
+        </div>
+    </div>
+</form>

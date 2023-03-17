@@ -1,0 +1,6 @@
+<nav *ngIf="showNavbar" class="navbar">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Notebooks</span>
+    <a *ngIf="showSignInBtn" [routerLink]="'/login'" class="btn btn-sign-in">Sign in</a>
+  </div>
+</nav>

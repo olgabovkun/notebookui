@@ -1,0 +1,19 @@
+<div class="pt-5 info-content">
+    <div *ngIf="!note" class="starter-content">
+        <div class="started-header text-center">Getting Started</div>
+        <div class="started-subheader text-center mb-5 text-muted">Create your perfect notebook and take control of your
+            notes and ideas</div>
+
+        <div class=" info-header">What you can do?</div>
+        <ul>
+            <li>Create notebook</li>
+            <li>Add text notes to notebook</li>
+            <li>Add files to notebook</li>
+            <li>Import docs (doc,excel) to notes</li>
+        </ul>
+    </div>
+    <div *ngIf="note" class="note-content">
+        <div class="notebook-title">{{notebook?.title}}</div>
+        <div class="note-title">{{note.title}}</div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="row ">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+            <i class="bi bi-three-dots" id="dropdownForm1" ngbDropdownToggle></i>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="position-fixed">
+
+                <div class="px-4 mt-2 dropdown-item" ngbDropdownItem>
+                    <div class="edit-notebook-wrapper edit-item" (click)="editNotebook()">
+                        <i class="pencil bi bi-pencil-fill me-3"></i>
+                        <span>Edit notebook</span>
+                    </div>
+                </div>
+
+                <div class="px-4 mt-1 dropdown-item" ngbDropdownItem>
+                    <div class="add-note-wrapper edit-item" (click)="deleteNotebook()">
+                        <i class="bi bi-trash-fill me-3"></i>
+                        <span>Delete notebook</span>
+                    </div>
+                </div>
+
+                <div class="px-4 mt-1 mb-2 dropdown-item" ngbDropdownItem>
+                    <div class="add-note-wrapper edit-item" (click)="addNote()">
+                        <i class="bi bi-plus-circle me-3"></i>
+                        <span>Add note</span>
+                    </div>
+                </div>
+
+                <!-- <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1">Email address</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="exampleDropdownFormEmail1"
+                                    placeholder="email@example.com"
+                                    autocomplete="username"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1">Password</label>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="exampleDropdownFormPassword1"
+                                    placeholder="Password"
+                                    autocomplete="current-password"
+                                />
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                                <label class="form-check-label" for="dropdownCheck"> Remember me </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form> -->
+                <div class="dropdown-divider"></div>
+                <button type="button" ngbDropdownItem>New around here? Sign up</button>
+                <button type="button" ngbDropdownItem>Forgot password?</button>
+            </div>
+        </div>
+    </div>
+</div>

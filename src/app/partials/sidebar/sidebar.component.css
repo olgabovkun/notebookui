@@ -1,0 +1,65 @@
+.sidebar {
+    float: left;
+    -webkit-box-shadow: 2px 0px 15px -2px rgb(113 113 114 / 30%);
+    box-shadow: 2px 0px 15px -2px rgb(113 113 114 / 30%);
+}
+
+.header {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #8c00ff;
+}
+
+.divider {
+    background-color: #ebebeb;
+    width: 2px;
+    float: left;
+    cursor: ew-resize;
+}
+
+.opened-sidebar {
+    height: calc(100vh - 56px);
+    
+}
+
+.notebooks {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    overflow-y: scroll;
+    height: 83%;
+}
+
+.closed-sidebar {
+    width: 50px;
+}
+
+.notebook-item {
+    font-weight: 300;
+}
+
+.note-item {
+    margin-left: 2.5em;
+}
+
+.add-notebook{
+    cursor: pointer;
+}
+.add-notebook-text {
+    font-weight: 300;
+}
+
+.dots {
+    float: right;
+    display: none;
+    width: 10%;
+    cursor: pointer;
+}
+
+.notebook-item:hover .dots {
+    display: inline-block;
+}
+
+.notebook-item-title{
+    width: 90%;
+}
