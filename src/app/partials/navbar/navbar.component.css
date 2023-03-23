@@ -3,6 +3,7 @@
     letter-spacing: 0.1m;
     font-size: 1.5em;
     font-weight: 400;
+    color: #8c00ff;
 }
 
 .btn-sign-in {
@@ -17,4 +18,8 @@
 }
 .btn-sign-in:hover {
     background-color: #a332ff;
+}
+
+a {
+    text-decoration: none;
 }
