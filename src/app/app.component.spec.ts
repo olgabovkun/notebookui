@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'notebookweb'`, () => {
+  it(`should have as title 'notebookui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('notebookweb');
+    expect(app.title).toEqual('notebookui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('notebookweb app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('notebookui app is running!');
   });
 });
