@@ -37,15 +37,14 @@ export class ContentComponent implements OnInit, OnDestroy {
     }
 
     public getNoteById(noteId: string): void {
-        this.notebookService.getNoteById(noteId).subscribe(
-            (response: Note) => {
+        this.notebookService.getNoteById(noteId).subscribe({
+            next: (response: Note) => {
                 this.note = response;
-                console.log(response);
             },
-            (error: HttpErrorResponse) => {
+            error: (error: HttpErrorResponse) => {
                 alert(error.message);
             }
-        )
+        })
     }
 
     private subscribe(): void {

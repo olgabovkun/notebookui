@@ -46,14 +46,14 @@ export class SidebarComponent implements OnInit {
     }
 
     public getNotebooks() {
-        this.notebookService.getNotebooks().subscribe(
-            (response: Notebook[]) => {
+        this.notebookService.getNotebooks().subscribe({
+            next: (response: Notebook[]) => {
                 this.notebooks = response;
             },
-            (error: HttpErrorResponse) => {
+            error: (error: HttpErrorResponse) => {
                 alert(error.message);
             }
-        )
+        })
     }
 
     toggleSideBar() {
