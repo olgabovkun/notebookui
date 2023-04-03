@@ -1,4 +1,3 @@
-
 .header {
     font-size: 4em;
     font-weight: 400;
@@ -8,4 +7,41 @@
 .subheader {
     font-size: 2em;
     font-weight: 300;
+}
+
+.description {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+@media(max-width: 770px) {
+    .header {
+        font-size: 3.4em;
+    }
+
+    .subheader {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 548px) {
+    .header {
+        font-size: 2.8em;
+    }
+
+    .subheader {
+        font-size: 1.3em;
+    }
+}
+
+@media(max-width: 456px) {
+    .header {
+        font-size: 2.3em;
+    }
+}
+
+@media(max-width: 378px) {
+    .header {
+        font-size: 2.1em;
+    }
 }
