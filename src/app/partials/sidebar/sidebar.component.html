@@ -55,6 +55,10 @@
 
     <div class="h-100 divider d-inline-block me-5" *ngIf="showSideBar" (mousedown)="start($event)"></div>
 
+    <div class="logout pt-2 px-3">
+        <app-logout-dropdown></app-logout-dropdown>
+    </div>
+
     <ng-container *ngIf="this.noteId">
         <ng-container *ngIf="(this.notebooks$ | async) as notebooks">
             <ng-container *ngIf="(this.note$ | async) as note">

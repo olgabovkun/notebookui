@@ -1,8 +1,3 @@
-/* .dots {
-    float: right;
-    display: none;
-    width: 10%;
-} */
 
 .dropdown-toggle::after {
     display:none;
@@ -13,7 +8,7 @@
 }
 
 .edit-item:hover {
-    color:blueviolet;
+    color: #8c00ff;
 }
 
 .dropdown-item:active {

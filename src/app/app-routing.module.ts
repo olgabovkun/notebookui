@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'register', component: SignupComponent },
   { path: 'home', component: HomeComponent },
   { path: 'home/note/:id', component: HomeComponent },
+  // { path: '**', component: PageNotFoundComponent }, // todo
 ];
 
 @NgModule({

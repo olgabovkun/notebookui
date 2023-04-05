@@ -1,0 +1,29 @@
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.edit-item {
+    cursor: pointer;
+}
+
+.edit-item:hover {
+    color:#8c00ff;
+}
+
+.dropdown-item:active {
+    background-color: #f2f2f2;
+}
+  
+.dropdown-menu {
+    min-width: 1em;
+}
+
+.bi-person-circle {
+    color: #8c00ff;
+    cursor: pointer;
+}
+
+.bi-person-circle:hover {
+    color: #a332ff
+}

@@ -63,3 +63,8 @@
 .notebook-item-title{
     width: 90%;
 }
+
+.logout {
+    float: right;
+    font-size: 1.5em;
+}

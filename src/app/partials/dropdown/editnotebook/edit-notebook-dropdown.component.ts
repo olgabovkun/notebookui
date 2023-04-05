@@ -3,7 +3,7 @@ import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { catchError, first, tap } from "rxjs";
 import { Notebook } from "src/app/model/notebook";
 import { NotebookService } from "src/app/service/api/notebook.service";
-import { NotebookModalComponent } from "../modal/notebookform/notebook-modal.component";
+import { NotebookModalComponent } from "../../modal/notebookform/notebook-modal.component";
 
 @Component({
     selector: 'app-edit-notebook-dropdown',
@@ -33,6 +33,7 @@ export class EditNotebookDropbownComponent {
     }
 
     addNote() {
+        // todo
     }
 
     refresh(): void {
