@@ -1,0 +1,28 @@
+h1 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+.btn-home {
+    background-color: #8c00ff;
+    color: #f2f2f2;
+    border-radius: 1.3em;
+    width: 50%;
+}
+
+.btn-home:active {
+    border: 1px solid #8c00ff !important;
+    background-color: white !important;
+    color: #8c00ff;
+}
+
+.btn-home:hover {
+    background-color: #a332ff;
+}
+
+.vertical-center {
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+}
