@@ -66,4 +66,7 @@
             </ng-container>
         </ng-container>
     </ng-container>
+    <ng-container *ngIf="!this.noteId">
+        <app-content></app-content>
+    </ng-container>
 </div>

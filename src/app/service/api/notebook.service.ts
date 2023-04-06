@@ -35,4 +35,8 @@ export class NotebookService {
         return this.http.get<Note>(`${this.apiServerUrl}/note/${noteId}`);
     }
 
+    public addNote(notebookId: string, note: Note): Observable<Note> {
+        return this.http.post<Note>(`${this.apiServerUrl}/${notebookId}/add-note`, note);
+    }
+
 }

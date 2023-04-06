@@ -4,6 +4,5 @@ export interface Note {
     title: string,
     content: string,
     createdAt: Date,
-    updatedAt: Date,
-    notebookId: string
+    updatedAt: Date
 }

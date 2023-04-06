@@ -15,15 +15,17 @@ import { ContentService } from "./content.service";
 export class ContentComponent implements OnInit, OnDestroy {
 
     private subscriptions: Subscription[] = [];
-    
+
     @Input() notebook: Notebook | undefined;
     @Input() notebooks: Notebook[] = []
-    @Input() note!: Note;
+    @Input() note: Note;
 
     constructor(private notebookService: NotebookService,
-                private contentService: ContentService) { }
+        private contentService: ContentService) { }
 
     ngOnInit(): void {
+        console.log('content component');
+        console.log(this.note);
         this.notebook = this.notebooks.filter(notebook => notebook.notes.flatMap(note => note.id).includes(this.note?.id))[0];
         this.subscribe();
     }
@@ -49,7 +51,7 @@ export class ContentComponent implements OnInit, OnDestroy {
 
     private subscribe(): void {
         this.subscriptions = [
-            this.contentService.openNote$.subscribe(({note, notebook}) => {
+            this.contentService.openNote$.subscribe(({ note, notebook }) => {
                 this.openNote(note);
                 this.notebook = notebook;
             })

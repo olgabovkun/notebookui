@@ -14,6 +14,7 @@ import { ContentService } from './partials/content/content.service';
 import { EditNotebookDropbownComponent } from './partials/dropdown/editnotebook/edit-notebook-dropdown.component';
 import { LogoutDropbownComponent } from './partials/dropdown/logout/logout-dropdown.component';
 import { FooterComponent } from './partials/footer/footer.component';
+import { DeleteConfirmModalComponent } from './partials/modal/deleteconfirm/delete-confirm.component';
 import { NotebookModalComponent } from './partials/modal/notebookform/notebook-modal.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
 import { SidebarComponent } from './partials/sidebar/sidebar.component';
@@ -34,7 +35,8 @@ import { TokenInterceptor } from './service/interceptor/token.interceptor.servic
     ContentComponent,
     NotebookModalComponent,
     EditNotebookDropbownComponent,
-    LogoutDropbownComponent
+    LogoutDropbownComponent,
+    DeleteConfirmModalComponent
   ],
   imports: [
     BrowserModule,
